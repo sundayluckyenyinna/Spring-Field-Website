@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: springfield_user
+    password: spring_user_admin@
+    url: jdbc:mysql://172.236.28.110:3306/website
+    hikari:
+      maximum-pool-size: 2
+  main:
+    allow-circular-references: true
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 50MB
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical-strategy: com.springfield.website.common.SnakeCaseNamingStrategy
+
+ftp:
+  remote:
+    firebase:
+      base-file-path: https://firebasestorage.googleapis.com/v0/b/alquimia-app.appspot.com/o/
+      access-token: randomAccessToken
+      default-bucket: alquimia-app.appspot.com
+      default-content-type: media

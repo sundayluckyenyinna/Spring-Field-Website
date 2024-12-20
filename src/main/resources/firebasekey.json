@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "alquimia-app",
+  "private_key_id": "ec9d65aca7a8d3c8f3789b4c6e27442c56ed70a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQClqMp7Gh91AbEb\ndfgYFI02RVpSORdjKKnLBcDFlWlt2ZgaehdhaLskhTsM000YAcOiwfDyptPXzsWG\nyOhZmHT+V9j45/HzG7zBc+gt1Uroe+yulzs28vUyWxzqle/OdR2zgbqwOkbo41KN\n57H8BCu4lMm/2wzofQrIGoESiYbC/3klyBNK30JpJdovMzgEnpV6AqdK5McjSo/e\nGsgdXK+me4fIh3iMy79eCarb+MZo6KxumcWxfgEb0w/Rqlk/gOKYpQC2in1Ou8zg\nekRwjhThjAWzecZNy0s453UgUD0rS5fxrMfLBvCony+2GE+K6B5VnDDOH5cEpTVh\nYPrHZasNAgMBAAECggEABQDSDLcUmCNoRpy2KilaEneJwM358i66N2gsaEtDlzkT\n1POMXTlyiCnV8g83rC/xdABI11Xz3qK0vdtiLm03q1mFM2Sd9BUJtbYFycyVVJbZ\nkR7+1NawUnMEro5qDbblIhTFn1OYl1QLnD7mgJFdA1ggYmuqj3hR/l/T4iFxMSvF\nl5ljiepziO09oXfbrFP74RFu/wV4tbqp6xW9pQEDfcpwFbX/SyGeBUiyrKeA5EPk\nMqa3UK+6WYXN9qo/RPxPSvKWpgV4AruvpwM0QwkzzJbwJYIX+OtBbQuIHQ7W6VHb\nj9W1Uno5keTrd3bCCyFThXs75B7rXvkuGreaLBjsaQKBgQDizW2Xc/XQ9JK2NbyW\n9klJiUiUfzfTYxxNxNZT/PizlVx9DC5NMnWS36XWkhJ4khzu9rB3+4+4rkw3bRQ4\nc+enRRBaOs+DTLDBEhMcPus0O1nnXreArldsRxwqgikDdandi3xwo6tvvfMUAfOd\nYgHlH6QQwCIlHM/Lqtn5bnLymwKBgQC6/E+7IcGBktNOOArJjq3oj2HbjZ6sddmh\nqvHBodB6G+iQc05C6ylyZCvJ8HZFa0JTK3wPyuu8ELq7iIPFUwZxI+n6eSDjvGnB\nvEVzb8l791Lf7uWa2p27NXFLv6hOpDOBcdZYVjxe17nQd2mREGgqXKwoEhw032YL\nT4b5+JR/dwKBgEczMnpfXwYwIXauO/wwaSV6wZxMq9viu1n2t0o6mmDWPOjM0CRP\n+PUY3NkVllLfm9GxBAlGogHaRfcIeVaXnFu4pL+OwuJ3Su3xnKo7Xl9RWpH1/Cmb\nkbpeQItfvTxmzeLNDU3XM9Sqjwry6eW4hNvHKRxRFOcNunY3tqJFeDSNAoGAOSdm\nN4zZ2QFIFWCL64/xGGS7RKDFH3HmU8QsoUMUtj5Rl9Wm1k2LHawAtnkJra5bV5Cz\nGyCrbZCvgyL3JBl8npibrDPaGcI9kTo7AE3rCDlQ26HqDKtGCzMKrlym1WLbW3Ww\nTtANI/BMm6vkWLLrJAevl4/xjze5uTtVxpJ00YECgYAh+PKdFd2GbcpZ5Ltk/13x\nX7DWK8uj5OfYtdqdqqWXH4Djg9ZX05jJbE0vzlj7GFuIttrbk0+faLVXUktK3QFt\nn8B9VbIEIj9T7Fdhfu33m0hAgB2V2yUpmCQSt1GeTkb8S9uINFuAAeGr9C4++rCW\nFnTBincFxG1Hwiw3His/OA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-dex5y@alquimia-app.iam.gserviceaccount.com",
+  "client_id": "103938819570069718982",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-dex5y%40alquimia-app.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
