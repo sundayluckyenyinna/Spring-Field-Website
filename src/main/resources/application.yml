@@ -34,3 +34,8 @@ ftp:
       access-token: randomAccessToken
       default-bucket: alquimia-app.appspot.com
       default-content-type: media
+
+cloudinary:
+  cloud-name: dq5pjz7ik
+  api-key: 141993117783932
+  api-secret: PF3yArm11Q8TezJyNuQhfFSdb7o
