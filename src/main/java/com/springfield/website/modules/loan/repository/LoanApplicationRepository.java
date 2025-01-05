@@ -11,5 +11,5 @@ import java.util.List;
 @Repository
 public interface LoanApplicationRepository extends JpaRepository<LoanApplication, Long>, JpaSpecificationExecutor<LoanApplication> {
 
-    LoanApplication findFirstByEmailAndBusinessNameAndStatusIn(String email, String businessName, List<LoanApplicationStatus> statuses);
+    LoanApplication findFirstByPhoneNumberAndStatusIn(String phoneNumber, List<LoanApplicationStatus> statuses);
 }

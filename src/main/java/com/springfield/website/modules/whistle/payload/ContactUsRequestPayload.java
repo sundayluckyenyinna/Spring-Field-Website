@@ -1,23 +1,24 @@
-package com.springfield.website.modules.loan.payload;
+package com.springfield.website.modules.whistle.payload;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
-import java.math.BigDecimal;
-
+@Slf4j
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class LoanApplicationResponseData {
+public class ContactUsRequestPayload {
 
-    private String email;
+    private String fullName;
     private String phoneNumber;
-    private BigDecimal approvedAmount;
-    private BigDecimal totalLoanRepayment;
-
+    private String email;
+    private String subject;
+    private String enquiryType;
+    private String description;
 }

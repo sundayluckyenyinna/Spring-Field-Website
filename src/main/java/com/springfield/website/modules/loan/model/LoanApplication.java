@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.threeten.bp.LocalDate;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -31,26 +32,25 @@ public class LoanApplication {
     @Enumerated(value = EnumType.STRING)
     private LoanApplicationStatus status;
 
-    @Enumerated(value = EnumType.STRING)
-    private LoanApplicationType loanApplicationType;
-
-    private String location;
-
     private String fullName;
+
+    private LocalDate dateOfBirth;
+
+    private String gender;
+
     private String email;
-    private BigDecimal monthlyIncome;
-    private String businessName;
+
+    private String phoneNumber;
+
+    private String stateOfResidence;
+
+    private String contactAddress;
+
     private BigDecimal loanAmount;
 
-    @Enumerated(value = EnumType.STRING)
-    private BusinessType businessType;
+    private String loanPurpose;
 
-    @Enumerated(value = EnumType.STRING)
-    private CollateralType collateralType;
-
-    private String homeAddress;
-
-    private String businessAddress;
+    private int loanTenure;
 
     @Column(nullable = false)
     private LocalDateTime createdAt;

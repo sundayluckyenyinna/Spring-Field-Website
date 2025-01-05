@@ -26,6 +26,7 @@ public class CloudinaryUploadService {
             response.setPublicLink(uploadLink);
             return response;
         } catch (Exception exception) {
+            exception.printStackTrace();
             response.setResponseCode(ResponseCode.FAILED_TRANSACTION);
             response.setRemoteFileName(file.getOriginalFilename());
             response.setPublicLink(StringValues.EMPTY_STRING);

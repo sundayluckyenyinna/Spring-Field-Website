@@ -14,6 +14,7 @@ import com.springfield.website.utils.HttpUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.threeten.bp.LocalDate;
 
 import java.util.Arrays;
 import java.util.List;
@@ -41,7 +42,8 @@ public class LoanApplicationServiceImpl implements LoanApplicationService{
     @Override
     public OmnixApiResponse<LoanApplicationResponseData> processLoanApplication(LoanApplicationRequestPayload requestPayload){
         try{
-            validationService.validateOngoingLoanUniquenessByEmailAndBusinessName(requestPayload.getEmail(), requestPayload.getBusinessName());
+            validationService.validateOngoingLoanUniquenessByPhoneNumberAnd(requestPayload.getPhoneNumber());
+            validationService.validateAccountExistenceForLoan(requestPayload.getPhoneNumber());
             int tenure = Integer.parseInt(localParamSource.getParamOrDefault(ParamKey.DEFAULT_BUSINESS_LOAN_APPLICATION_TENURE, "4"));
             double businessLoanInterestRate = Double.parseDouble(localParamSource.getParamOrDefault(ParamKey.BUSINESS_LOAN_APPLICATION_INTEREST, "5"));
             int businessLoanInterestIncrement = Integer.parseInt(localParamSource.getParamOrDefault(ParamKey.DEFAULT_BUSINESS_LOAN_APPLICATION_INTEREST_INCREMENT, "0"));
@@ -55,22 +57,22 @@ public class LoanApplicationServiceImpl implements LoanApplicationService{
             CreditBreakdownResponse creditBreakdownResponse = CreditCalculator.calculateCreditBreakdown(creditBreakdownRequest);
             LoanApplication loanApplication = LoanApplication.builder()
                     .guid(CommonUtil.generateGuid())
-                    .loanApplicationType(requestPayload.getLoanApplicationType())
-                    .location(requestPayload.getLocation())
                     .fullName(requestPayload.getFullName())
+                    .gender(requestPayload.getGender())
+                    .dateOfBirth(LocalDate.parse(requestPayload.getDateOfBirth()))
                     .email(requestPayload.getEmail())
-                    .monthlyIncome(requestPayload.getMonthlyIncome())
-                    .businessName(requestPayload.getBusinessName())
+                    .phoneNumber(requestPayload.getPhoneNumber())
+                    .stateOfResidence(requestPayload.getStateOfResidence())
+                    .contactAddress(requestPayload.getContactAddress())
                     .loanAmount(requestPayload.getLoanAmount())
-                    .businessType(requestPayload.getBusinessType())
-                    .collateralType(requestPayload.getCollateralType())
-                    .homeAddress(requestPayload.getHomeAddress())
-                    .businessAddress(requestPayload.getBusinessAddress())
+                    .loanPurpose(requestPayload.getLoanPurpose())
+                    .loanTenure(requestPayload.getLoanTenure())
                     .build();
             LoanApplication createdLoanApplication = loanApplicationRepository.saveAndFlush(loanApplication);
             log.info("Loan Application created successfully with ID: {}", createdLoanApplication.getId());
             LoanApplicationResponseData responseData = LoanApplicationResponseData.builder()
-                    .businessName(requestPayload.getBusinessName())
+                    .email(requestPayload.getEmail())
+                    .phoneNumber(requestPayload.getPhoneNumber())
                     .approvedAmount(creditBreakdownResponse.getTotalAmount())
                     .totalLoanRepayment(creditBreakdownResponse.getTotalRepayment())
                     .build();

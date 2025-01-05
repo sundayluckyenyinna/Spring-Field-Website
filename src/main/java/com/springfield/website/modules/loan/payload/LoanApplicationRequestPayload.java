@@ -10,6 +10,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.threeten.bp.LocalDate;
 
 import java.math.BigDecimal;
 
@@ -20,40 +22,29 @@ import java.math.BigDecimal;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LoanApplicationRequestPayload {
 
-    private LoanApplicationType loanApplicationType;
-
-    @NotNull(message = "location is required")
-    @NotBlank(message = "location is required")
-    private String location;
-
-
     @NotNull(message = "fullName is required")
     @NotBlank(message = "fullName is required")
     private String fullName;
+
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private String dateOfBirth;
+
+    private String gender;
 
     @NotNull(message = "email is required")
     @NotBlank(message = "email is required")
     private String email;
 
-    @NotNull(message = "monthlyIncome is required")
-    private BigDecimal monthlyIncome = BigDecimal.ZERO;
+    private String phoneNumber;
 
-    @NotNull(message = "businessName is required")
-    @NotBlank(message = "businessName is required")
-    private String businessName;
+    private String stateOfResidence;
+
+    private String contactAddress;
 
     @NotNull(message = "loanAmount is required")
     private BigDecimal loanAmount;
 
-    @NotNull(message = "businessType is required")
-    private BusinessType businessType;
+    private String loanPurpose;
 
-    @NotNull(message = "collateralType is required")
-    private CollateralType collateralType;
-
-    @NotNull(message = "homeAddress is required")
-    private String homeAddress;
-
-    @NotNull(message = "businessAddress is required")
-    private String businessAddress;
+    private int loanTenure;
 }
