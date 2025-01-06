@@ -123,14 +123,6 @@ public class OmnixRestControllerAdvice {
 
     private void writeResponseToClient(Object payload, int statusCode, HttpServletRequest servletRequest,  HttpServletResponse servletResponse) throws Exception{
         logger.logHttpApiResponse(payload, statusCode, servletResponse);
-//        servletResponse.setStatus(statusCode);
-//        servletResponse.setContentType(MediaType.APPLICATION_JSON_VALUE);
-//        servletResponse.setHeader("X-FORWARDED-FOR", "BPAY-DIGITAL");
-//        servletResponse.setHeader("Access-Control-Allow-Origin", "*");
-//        servletResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-//        servletResponse.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, idToken");
-//        servletResponse.setHeader("Access-Control-Allow-Credentials", "true");
-//        servletResponse.setHeader("Access-Control-Max-Age", "31536000");
         String responseJson = objectMapper.writeValueAsString(payload);
         servletResponse.getWriter().write(responseJson);
     }
