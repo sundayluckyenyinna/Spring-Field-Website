@@ -20,12 +20,12 @@ public class CorsFilter implements Filter {
             response.setStatus(Response.SC_OK);
             response.setHeader("Access-Control-Allow-Origin", "*");
             response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, HEAD, OPTIONS, DELETE, PATCH");
-            response.setHeader("Access-Control-Allow-Headers", "Channel-ID, Channel-Secret");
+            response.setHeader("Access-Control-Allow-Headers", "Channel-ID, Channel-Secret, Content-Type, Accept");
             return;
         }else{
             response.setHeader("Access-Control-Allow-Origin", "*");
             response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, HEAD, OPTIONS, DELETE, PATCH");
-            response.setHeader("Access-Control-Allow-Headers", "Channel-ID, Channel-Secret");
+            response.setHeader("Access-Control-Allow-Headers", "Channel-ID, Channel-Secret, Content-Type, Accept");
         }
         chain.doFilter(req, res);
     }
