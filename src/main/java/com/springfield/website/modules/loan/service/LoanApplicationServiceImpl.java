@@ -2,6 +2,7 @@ package com.springfield.website.modules.loan.service;
 
 import com.springfield.website.common.OmnixApiResponse;
 import com.springfield.website.common.ParamKey;
+import com.springfield.website.common.ResponseCode;
 import com.springfield.website.modules.loan.model.BusinessLocation;
 import com.springfield.website.modules.loan.model.BusinessType;
 import com.springfield.website.modules.loan.model.CollateralType;
@@ -67,6 +68,10 @@ public class LoanApplicationServiceImpl implements LoanApplicationService{
                     .loanAmount(requestPayload.getLoanAmount())
                     .loanPurpose(requestPayload.getLoanPurpose())
                     .loanTenure(requestPayload.getLoanTenure())
+                    .businessAddress(requestPayload.getBusinessAddress())
+                    .businessType(requestPayload.getBusinessType())
+                    .bvn(requestPayload.getBvn())
+                    .nin(requestPayload.getNin())
                     .build();
             LoanApplication createdLoanApplication = loanApplicationRepository.saveAndFlush(loanApplication);
             log.info("Loan Application created successfully with ID: {}", createdLoanApplication.getId());
@@ -78,7 +83,7 @@ public class LoanApplicationServiceImpl implements LoanApplicationService{
                     .build();
             return OmnixApiResponse.ofSuccessful(responseData);
         }catch (Exception exception){
-            throw HttpUtil.getResolvedException(exception);
+            throw HttpUtil.getResolvedException(ResponseCode.SUCCESS_CODE, exception);
         }
     }
 

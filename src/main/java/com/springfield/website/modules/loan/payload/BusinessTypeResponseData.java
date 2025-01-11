@@ -15,11 +15,13 @@ import lombok.NoArgsConstructor;
 public class BusinessTypeResponseData {
 
     private Long id;
+    private String prettyName;
     private BusinessType type;
 
     public static BusinessTypeResponseData fromIdAndBusinessType(long id, BusinessType businessType){
         return BusinessTypeResponseData.builder()
                 .id(id)
+                .prettyName(businessType.getDescription())
                 .type(businessType)
                 .build();
     }

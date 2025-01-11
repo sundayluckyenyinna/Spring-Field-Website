@@ -47,4 +47,20 @@ public class LoanApplicationRequestPayload {
     private String loanPurpose;
 
     private int loanTenure;
+
+    @NotNull(message = "businessAddress is required")
+    @NotBlank(message = "businessAddress is required")
+    private String businessAddress;
+
+    @NotNull(message = "businessType is required")
+    @NotBlank(message = "businessType is required")
+    private BusinessType businessType;
+
+    @NotNull(message = "bvn is required")
+    @NotBlank(message = "bvn is required")
+    private String bvn;
+
+    @NotNull(message = "nin is required")
+    @NotBlank(message = "nin is required")
+    private String nin;
 }

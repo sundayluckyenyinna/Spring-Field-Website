@@ -58,6 +58,15 @@ public class LoanApplication {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
+    private String businessAddress;
+
+    @Enumerated(value = EnumType.STRING)
+    private BusinessType businessType;
+
+    private String bvn;
+
+    private String nin;
+
     @PrePersist
     public void prePersist(){
         if(Objects.isNull(this.getCreatedAt())){

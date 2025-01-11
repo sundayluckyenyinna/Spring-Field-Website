@@ -1,0 +1,264 @@
+[
+  {
+    "state": "Bedfordshire",
+    "stateEnum": "BEDFORDSHIRE",
+    "localGovernments": ["Bedford", "Central Bedfordshire", "Luton"]
+  },
+  {
+    "state": "Berkshire",
+    "stateEnum": "BERKSHIRE",
+    "localGovernments": ["Bracknell Forest", "Reading", "Slough", "West Berkshire", "Windsor and Maidenhead", "Wokingham"]
+  },
+  {
+    "state": "Bristol",
+    "stateEnum": "BRISTOL",
+    "localGovernments": ["City of Bristol"]
+  },
+  {
+    "state": "Buckinghamshire",
+    "stateEnum": "BUCKINGHAMSHIRE",
+    "localGovernments": ["Aylesbury Vale", "Chiltern", "South Bucks", "Wycombe"]
+  },
+  {
+    "state": "Cambridgeshire",
+    "stateEnum": "CAMBRIDGESHIRE",
+    "localGovernments": ["Cambridge", "East Cambridgeshire", "Fenland", "Huntingdonshire", "South Cambridgeshire", "Peterborough"]
+  },
+  {
+    "state": "Cheshire",
+    "stateEnum": "CHESHIRE",
+    "localGovernments": ["Cheshire East", "Cheshire West and Chester", "Halton", "Warrington"]
+  },
+  {
+    "state": "City of London",
+    "stateEnum": "CITY_OF_LONDON",
+    "localGovernments": ["City of London"]
+  },
+  {
+    "state": "Cornwall",
+    "stateEnum": "CORNWALL",
+    "localGovernments": ["Cornwall", "Isles of Scilly"]
+  },
+  {
+    "state": "Cumbria",
+    "stateEnum": "CUMBRIA",
+    "localGovernments": ["Allerdale", "Barrow-in-Furness", "Carlisle", "Copeland", "Eden", "South Lakeland"]
+  },
+  {
+    "state": "Derbyshire",
+    "stateEnum": "DERBYSHIRE",
+    "localGovernments": ["Amber Valley", "Bolsover", "Chesterfield", "Derbyshire Dales", "Erewash", "High Peak", "North East Derbyshire", "South Derbyshire", "City of Derby"]
+  },
+  {
+    "state": "Devon",
+    "stateEnum": "DEVON",
+    "localGovernments": ["East Devon", "Exeter", "Mid Devon", "North Devon", "South Hams", "Teignbridge", "Torridge", "West Devon", "Plymouth", "Torbay"]
+  },
+  {
+    "state": "Dorset",
+    "stateEnum": "DORSET",
+    "localGovernments": ["Dorset", "Bournemouth", "Christchurch", "Poole"]
+  },
+  {
+    "state": "Durham",
+    "stateEnum": "DURHAM",
+    "localGovernments": ["County Durham", "Darlington", "Hartlepool", "Stockton-on-Tees (part)"]
+  },
+  {
+    "state": "East Riding of Yorkshire",
+    "stateEnum": "EAST_RIDING_OF_YORKSHIRE",
+    "localGovernments": ["East Riding of Yorkshire", "Kingston upon Hull"]
+  },
+  {
+    "state": "East Sussex",
+    "stateEnum": "EAST_SUSSEX",
+    "localGovernments": ["Eastbourne", "Hastings", "Lewes", "Rother", "Wealden", "Brighton and Hove"]
+  },
+  {
+    "state": "Essex",
+    "stateEnum": "ESSEX",
+    "localGovernments": ["Basildon", "Braintree", "Brentwood", "Castle Point", "Chelmsford", "Colchester", "Epping Forest", "Harlow", "Maldon", "Rochford", "Tendring", "Uttlesford", "Southend-on-Sea", "Thurrock"]
+  },
+  {
+    "state": "Gloucestershire",
+    "stateEnum": "GLOUCESTERSHIRE",
+    "localGovernments": ["Cheltenham", "Cotswold", "Forest of Dean", "Gloucester", "Stroud", "Tewkesbury"]
+  },
+  {
+    "state": "Greater London",
+    "stateEnum": "GREATER_LONDON",
+    "localGovernments": ["City of Westminster", "Camden", "Croydon", "Ealing", "Greenwich", "Hackney", "Hammersmith and Fulham", "Islington", "Kensington and Chelsea", "Lambeth", "Lewisham", "Southwark", "Tower Hamlets", "Wandsworth", "City of London", "and more"]
+  },
+  {
+    "state": "Greater Manchester",
+    "stateEnum": "GREATER_MANCHESTER",
+    "localGovernments": ["Bolton", "Bury", "Manchester", "Oldham", "Rochdale", "Salford", "Stockport", "Tameside", "Trafford", "Wigan"]
+  },
+  {
+    "state": "Hampshire",
+    "stateEnum": "HAMPSHIRE",
+    "localGovernments": ["Basingstoke and Deane", "East Hampshire", "Eastleigh", "Fareham", "Gosport", "Hart", "Havant", "New Forest", "Rushmoor", "Test Valley", "Winchester", "Southampton", "Portsmouth"]
+  },
+  {
+    "state": "Herefordshire",
+    "stateEnum": "HEREFORDSHIRE",
+    "localGovernments": ["County of Herefordshire"]
+  },
+  {
+    "state": "Hertfordshire",
+    "stateEnum": "HERTFORDSHIRE",
+    "localGovernments": ["Broxbourne", "Dacorum", "East Hertfordshire", "Hertsmere", "North Hertfordshire", "St Albans", "Stevenage", "Three Rivers", "Watford", "Welwyn Hatfield"]
+  },
+  {
+    "state": "Isle of Wight",
+    "stateEnum": "ISLE_OF_WIGHT",
+    "localGovernments": ["Isle of Wight"]
+  },
+  {
+    "state": "Kent",
+    "stateEnum": "KENT",
+    "localGovernments": ["Ashford", "Canterbury", "Dartford", "Dover", "Folkestone and Hythe", "Gravesham", "Maidstone", "Sevenoaks", "Swale", "Thanet", "Tonbridge and Malling", "Tunbridge Wells", "Medway"]
+  },
+  {
+    "state": "Lancashire",
+    "stateEnum": "LANCASHIRE",
+    "localGovernments": ["Burnley", "Chorley", "Fylde", "Hyndburn", "Lancaster", "Pendle", "Preston", "Ribble Valley", "Rossendale", "South Ribble", "West Lancashire", "Wyre", "Blackburn with Darwen", "Blackpool"]
+  },
+  {
+    "state": "Leicestershire",
+    "stateEnum": "LEICESTERSHIRE",
+    "localGovernments": ["Blaby", "Charnwood", "Harborough", "Hinckley and Bosworth", "Melton", "North West Leicestershire", "Oadby and Wigston", "City of Leicester"]
+  },
+  {
+    "state": "Lincolnshire",
+    "stateEnum": "LINCOLNSHIRE",
+    "localGovernments": ["Boston", "East Lindsey", "Lincoln", "North Kesteven", "South Holland", "South Kesteven", "West Lindsey", "North Lincolnshire", "North East Lincolnshire"]
+  },
+  {
+    "state": "Merseyside",
+    "stateEnum": "MERSEYSIDE",
+    "localGovernments": ["Knowsley", "Liverpool", "St Helens", "Sefton", "Wirral"]
+  },
+  {
+    "state": "Norfolk",
+    "stateEnum": "NORFOLK",
+    "localGovernments": ["Breckland", "Broadland", "Great Yarmouth", "King's Lynn and West Norfolk", "North Norfolk", "Norwich", "South Norfolk"]
+  },
+  {
+    "state": "North Yorkshire",
+    "stateEnum": "NORTH_YORKSHIRE",
+    "localGovernments": ["Craven", "Hambleton", "Harrogate", "Richmondshire", "Ryedale", "Scarborough", "Selby", "City of York"]
+  },
+  {
+    "state": "Northamptonshire",
+    "stateEnum": "NORTHAMPTONSHIRE",
+    "localGovernments": ["Corby", "Daventry", "East Northamptonshire", "Kettering", "Northampton", "South Northamptonshire", "Wellingborough"]
+  },
+  {
+    "state": "Northumberland",
+    "stateEnum": "NORTHUMBERLAND",
+    "localGovernments": ["Northumberland"]
+  },
+  {
+    "state": "Nottinghamshire",
+    "stateEnum": "NOTTINGHAMSHIRE",
+    "localGovernments": ["Ashfield", "Bassetlaw", "Broxtowe", "Gedling", "Mansfield", "Newark and Sherwood", "Rushcliffe", "City of Nottingham"]
+  },
+  {
+    "state": "Oxfordshire",
+    "stateEnum": "OXFORDSHIRE",
+    "localGovernments": ["Cherwell", "Oxford", "South Oxfordshire", "Vale of White Horse", "West Oxfordshire"]
+  },
+  {
+    "state": "Rutland",
+    "stateEnum": "RUTLAND",
+    "localGovernments": ["Rutland"]
+  },
+  {
+    "state": "Shropshire",
+    "stateEnum": "SHROPSHIRE",
+    "localGovernments": ["Shropshire", "Telford and Wrekin"]
+  },
+  {
+    "state": "Somerset",
+    "stateEnum": "SOMERSET",
+    "localGovernments": ["Mendip", "Sedgemoor", "South Somerset", "Taunton Deane", "West Somerset", "Bath and North East Somerset"]
+  },
+  {
+    "state": "South Yorkshire",
+    "stateEnum": "SOUTH_YORKSHIRE",
+    "localGovernments": ["Barnsley", "Doncaster", "Rotherham", "Sheffield"]
+  },
+  {
+    "state": "Staffordshire",
+    "stateEnum": "STAFFORDSHIRE",
+    "localGovernments": ["Cannock Chase", "East Staffordshire", "Lichfield", "Newcastle-under-Lyme", "South Staffordshire", "Stafford", "Staffordshire Moorlands", "Tamworth", "City of Stoke-on-Trent"]
+  },
+  {
+    "state": "Suffolk",
+    "stateEnum": "SUFFOLK",
+    "localGovernments": ["Babergh", "Forest Heath", "Ipswich", "Mid Suffolk", "St Edmundsbury", "Suffolk Coastal", "Waveney"]
+  },
+  {
+    "state": "Surrey",
+    "stateEnum": "SURREY",
+    "localGovernments": ["Elmbridge", "Epsom and Ewell", "Guildford", "Mole Valley", "Reigate and Banstead", "Runnymede", "Spelthorne", "Surrey Heath", "Tandridge", "Waverley", "Woking"]
+  },
+  {
+    "state": "Tyne and Wear",
+    "stateEnum": "TYNE_AND_WEAR",
+    "localGovernments": ["Gateshead", "Newcastle upon Tyne", "North Tyneside", "South Tyneside", "Sunderland"]
+  },
+  {
+    "state": "Warwickshire",
+    "stateEnum": "WARWICKSHIRE",
+    "localGovernments": ["North Warwickshire", "Nuneaton and Bedworth", "Rugby", "Stratford-on-Avon", "Warwick"]
+  },
+  {
+    "state": "West Midlands",
+    "stateEnum": "WEST_MIDLANDS",
+    "localGovernments": ["Birmingham", "Coventry", "Dudley", "Sandwell", "Solihull", "Walsall", "Wolverhampton"]
+  },
+  {
+    "state": "West Sussex",
+    "stateEnum": "WEST_SUSSEX",
+    "localGovernments": ["Adur", "Arun", "Chichester", "Crawley", "Horsham", "Mid Sussex", "Worthing"]
+  },
+  {
+    "state": "West Yorkshire",
+    "stateEnum": "WEST_YORKSHIRE",
+    "localGovernments": ["Bradford", "Calderdale", "Kirklees", "Leeds", "Wakefield"]
+  },
+  {
+    "state": "Wiltshire",
+    "stateEnum": "WILTSHIRE",
+    "localGovernments": [
+      "Swindon",
+      "Salisbury",
+      "Trowbridge",
+      "Chippenham",
+      "Warminster",
+      "Devizes",
+      "Melksham",
+      "Calne",
+      "Amesbury",
+      "Westbury"
+    ]
+  },
+  {
+    "state": "Worcestershire",
+    "stateEnum": "WORCESTERSHIRE",
+    "localGovernments": [
+      "Worcester",
+      "Redditch",
+      "Kidderminster",
+      "Malvern",
+      "Bromsgrove",
+      "Evesham",
+      "Droitwich Spa",
+      "Stourport-on-Severn",
+      "Pershore",
+      "Bewdley"
+    ]
+  }
+]

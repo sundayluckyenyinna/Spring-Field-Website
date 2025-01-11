@@ -39,3 +39,22 @@ cloudinary:
   cloud-name: dq5pjz7ik
   api-key: 141993117783932
   api-secret: PF3yArm11Q8TezJyNuQhfFSdb7o
+
+#email:
+#  smtp:
+#    host-name: mail.springfieldmfb.com
+#    username: support@springfieldmfb.com
+#    password: Admin@spring
+#    port: 465
+#    from: SpringFieldMfb
+
+email:
+  smtp:
+    host-name: mail.bpay.africa
+    port: 26
+    username: support@bpay.africa
+    password: :U6:tMMKkZp5VSX
+    from: support@springfieldmfb.com
+
+server:
+  port: 8085
