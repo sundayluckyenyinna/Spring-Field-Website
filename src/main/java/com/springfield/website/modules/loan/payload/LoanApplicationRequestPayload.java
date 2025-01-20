@@ -53,7 +53,6 @@ public class LoanApplicationRequestPayload {
     private String businessAddress;
 
     @NotNull(message = "businessType is required")
-    @NotBlank(message = "businessType is required")
     private BusinessType businessType;
 
     @NotNull(message = "bvn is required")
