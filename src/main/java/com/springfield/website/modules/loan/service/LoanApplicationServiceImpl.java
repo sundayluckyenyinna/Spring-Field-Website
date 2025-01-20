@@ -2,7 +2,9 @@ package com.springfield.website.modules.loan.service;
 
 import com.springfield.website.common.OmnixApiResponse;
 import com.springfield.website.common.ParamKey;
+import com.springfield.website.common.RequestMeta;
 import com.springfield.website.common.ResponseCode;
+import com.springfield.website.modules.generic.email.EmailService;
 import com.springfield.website.modules.loan.model.BusinessLocation;
 import com.springfield.website.modules.loan.model.BusinessType;
 import com.springfield.website.modules.loan.model.CollateralType;
@@ -10,8 +12,7 @@ import com.springfield.website.modules.loan.model.LoanApplication;
 import com.springfield.website.modules.loan.payload.*;
 import com.springfield.website.modules.loan.repository.LoanApplicationRepository;
 import com.springfield.website.modules.param.LocalParamSource;
-import com.springfield.website.utils.CommonUtil;
-import com.springfield.website.utils.HttpUtil;
+import com.springfield.website.utils.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ import org.threeten.bp.LocalDate;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
@@ -26,6 +28,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RequiredArgsConstructor
 public class LoanApplicationServiceImpl implements LoanApplicationService{
 
+    private final EmailService emailService;
     private final LocalParamSource localParamSource;
     private final LoanValidationService validationService;
     private final LoanApplicationRepository loanApplicationRepository;
@@ -41,7 +44,7 @@ public class LoanApplicationServiceImpl implements LoanApplicationService{
     }
 
     @Override
-    public OmnixApiResponse<LoanApplicationResponseData> processLoanApplication(LoanApplicationRequestPayload requestPayload){
+    public OmnixApiResponse<LoanApplicationResponseData> processLoanApplication(RequestMeta requestMeta, LoanApplicationRequestPayload requestPayload){
         try{
             validationService.validateOngoingLoanUniquenessByPhoneNumberAnd(requestPayload.getPhoneNumber());
             validationService.validateAccountExistenceForLoan(requestPayload.getPhoneNumber());
@@ -75,6 +78,26 @@ public class LoanApplicationServiceImpl implements LoanApplicationService{
                     .build();
             LoanApplication createdLoanApplication = loanApplicationRepository.saveAndFlush(loanApplication);
             log.info("Loan Application created successfully with ID: {}", createdLoanApplication.getId());
+
+            // Send email to admin
+            String adminRecipients = localParamSource.getParamOrDefault(ParamKey.ADMIN_RECIPIENT_MAILS, "sundayluckyenyinnadeveloper@gmail.com, support@springfieldmfb.com");
+            List<String> emailRecipients = List.of(adminRecipients.split(StringValues.COMMA));
+            Map<String, Object> params = MapBuilder.start()
+                    .add("customerName", loanApplication.getFullName())
+                    .add("gender", loanApplication.getGender())
+                    .add("email", loanApplication.getEmail())
+                    .add("dob", loanApplication.getDateOfBirth().toString())
+                    .add("bvn", loanApplication.getBvn())
+                    .add("nin", loanApplication.getNin())
+                    .add("address", loanApplication.getBusinessAddress())
+                    .add("state", loanApplication.getStateOfResidence())
+                    .add("phoneNumber", loanApplication.getPhoneNumber())
+                    .add("loanRequested", loanApplication.getLoanAmount())
+                    .add("purpose", loanApplication.getLoanPurpose())
+                    .add("tenure", loanApplication.getLoanTenure())
+                    .add("submissionDate", DateUtils.getCurrentDateTime().toString())
+                    .asMap();
+            emailService.scheduleEmail(requestMeta.getAppUser(), "Notification of Customer Loan Application Request via Website",  "loan-application.html", params, emailRecipients);
             LoanApplicationResponseData responseData = LoanApplicationResponseData.builder()
                     .email(requestPayload.getEmail())
                     .phoneNumber(requestPayload.getPhoneNumber())

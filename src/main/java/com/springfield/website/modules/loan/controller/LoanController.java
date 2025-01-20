@@ -47,7 +47,7 @@ public class LoanController {
             @Parameter(hidden = true) @RequestMetaArg RequestMeta requestMeta,
             @Valid @RequestBody LoanApplicationRequestPayload requestPayload
     ){
-        return ResponseEntity.ok(loanApplicationService.processLoanApplication(requestPayload));
+        return ResponseEntity.ok(loanApplicationService.processLoanApplication(requestMeta, requestPayload));
     }
 
 
