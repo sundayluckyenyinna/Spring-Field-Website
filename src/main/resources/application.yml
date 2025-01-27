@@ -50,11 +50,11 @@ cloudinary:
 
 email:
   smtp:
-    host-name: mail.bpay.africa
-    port: 26
-    username: support@bpay.africa
-    password: :U6:tMMKkZp5VSX
-    from: support@springfieldmfb.com
+    host-name: mail.springfieldmfb.com
+    port: 465
+    username: myaccount@springfieldmfb.com
+    password: Admin@Spring
+    from: myaccount@springfieldmfb.com
 
 server:
   port: 8080

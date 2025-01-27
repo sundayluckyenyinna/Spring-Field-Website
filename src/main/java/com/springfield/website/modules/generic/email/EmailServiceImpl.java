@@ -1,6 +1,7 @@
 package com.springfield.website.modules.generic.email;
 
 import com.springfield.website.modules.appuser.entities.AppUser;
+import com.springfield.website.modules.appuser.repository.AppUserRepository;
 import com.springfield.website.modules.generic.email.payload.Attachment;
 import com.springfield.website.modules.generic.email.payload.EmailResponseData;
 import com.springfield.website.modules.generic.email.payload.SimpleEmailRequestPayload;
@@ -23,7 +24,9 @@ import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeMultipart;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.event.EventListener;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Component;
 import com.springfield.website.utils.DateUtils;
@@ -51,9 +54,10 @@ public class EmailServiceImpl implements EmailService{
             mailSender.setPassword(properties.getPassword());
 
             Properties props = mailSender.getJavaMailProperties();
-//            props.put("mail.transport.protocol", "smtp");
+            props.put("mail.transport.protocol", "smtp");
             props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.starttls.enable", "true");
+            props.put("mail.smtp.starttls.enable", "false");
+            props.put("mail.smtp.ssl.enable", "true");
             props.put("mail.debug", "true");
 //            props.put("mail.smtp.ssl.trust", "smtp.zeptomail.com");
 
@@ -157,5 +161,12 @@ public class EmailServiceImpl implements EmailService{
                     .build();
             emailRepository.saveAndFlush(emailNotification);
         }catch (Exception ignored){}
+    }
+
+    private final AppUserRepository appUserRepository;
+    @EventListener(ApplicationStartedEvent.class)
+    public void testEmail(){
+        AppUser appUser = appUserRepository.findFirstByChannel("WEBSITE");
+        scheduleEmail(appUser, "Testing", "loan-application.html", new LinkedHashMap<>(), List.of("sundayluckyenyinna@gmail.com"));
     }
 }
