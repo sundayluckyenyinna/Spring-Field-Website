@@ -40,21 +40,21 @@ cloudinary:
   api-key: 141993117783932
   api-secret: PF3yArm11Q8TezJyNuQhfFSdb7o
 
-#email:
-#  smtp:
-#    host-name: mail.springfieldmfb.com
-#    username: support@springfieldmfb.com
-#    password: Admin@spring
-#    port: 465
-#    from: SpringFieldMfb
-
 email:
   smtp:
     host-name: mail.springfieldmfb.com
+    username: support@springfieldmfb.com
+    password: Admin@spring
     port: 465
-    username: myaccount@springfieldmfb.com
-    password: Admin@Spring
-    from: myaccount@springfieldmfb.com
+    from: support@springfieldmfb.com
+
+#email:
+#  smtp:
+#    host-name: server345.web-hosting.com
+#    port: 465
+#    username: noreply@banffy.co
+#    password: Ban458*ayY
+#    from: noreply@banffy.co
 
 server:
   port: 8080
